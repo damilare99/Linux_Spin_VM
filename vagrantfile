@@ -3,7 +3,7 @@
 #  run this command to bring all the machine up ==>vagrant up --provider=virtualbox
 
 Vagrant.configure("2") do |config|
-       config.vm.box = "centos/7"
+ #     config.vm.box = "centos/7"
        config.vm.box_version = "2004.01"
        config.vm.boot_timeout = 600
        config.vm.provider "virtualbox" do |v|
@@ -51,7 +51,7 @@ config.vm.define "server2" do |server2|
     server3.vm.network "private_network", ip: "192.168.33.24"
     server3.vm.hostname = "server3"
     #server3.vm.provision "shell", inline: <<-SHELL
-          sudo useradd ansible && echo "password" |passwd --stdin ansible
+    #    sudo useradd ansible && echo "password" |passwd --stdin ansible
     #     yum clean all -y
     #     yum update -y
     # SHELL
